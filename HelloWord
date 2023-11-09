@@ -10,8 +10,10 @@ public class HelloWord {
 		
 		Scanner s = new Scanner (System.in);
 		System.out.print("Digite o verbo: ");
-		String Verbo = s.nextLine();
-		Verbo Verbo = new Verbo(Verbo);
+		String Verb = s.nextLine();
+		String radical = Verb.substring(0, Verb.length() - 2);
+		String sufixo = Verb.substring(Verb.length() - 2, Verb.length());
+		Verbo Verbo = new Verbo(radical, sufixo);
 		Verbo.conjugar();
 		System.out.println("Verbo: " + Verbo.getRadical()+ Verbo.getSufixo()+"\n Radical:" + Verbo.getRadical() +" \n Sufixo:" + Verbo.getSufixo());
 	}
