@@ -1,0 +1,18 @@
+package hello;
+
+import java.util.Scanner;
+
+import Verbo.Verbo;
+
+public class HelloWord {
+	
+	public static void main(String[] args) {
+		
+		Scanner s = new Scanner (System.in);
+		System.out.print("Digite o verbo: ");
+		String Verbo = s.nextLine();
+		Verbo Verbo = new Verbo(Verbo);
+		Verbo.conjugar();
+		System.out.println("Verbo: " + Verbo.getRadical()+ Verbo.getSufixo()+"\n Radical:" + Verbo.getRadical() +" \n Sufixo:" + Verbo.getSufixo());
+	}
+}
