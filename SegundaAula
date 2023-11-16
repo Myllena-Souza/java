@@ -1,0 +1,64 @@
+package classes;
+
+import java.util.Scanner;
+
+public class Cliente {
+	//ATRIBUTOS DEVE SER TUDO PRIVADO
+	private String Nome;
+	private int idade;
+	private String CPF;
+	public Cliente(String nome, String cPF) {
+		super(); //(invocação do construtor da classe mãe.
+		Nome = nome;
+		this.idade = 0;
+		CPF = cPF;
+	}
+	public String getNome() {
+		return Nome;
+	}
+	public void setNome(String nome) {
+		Nome = nome;
+	}
+	public int getIdade() {
+		return idade;
+	}
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+	public String getCPF() {
+		return CPF;
+	}
+	public void setCPF(String cPF) {
+		CPF = cPF;
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner (System.in); // criando em sc uma instancia quepermite ler dados solicitados 
+		System.out.println("Digite um nome: ");  // Printando
+		String Nome = sc.nextLine (); // definindo a variavel como string  nextLine(server para ler o objeto sc)
+		
+		System.out.println("Digite o CPF");
+		String CPF = sc.nextLine ();
+		
+		sc.
+	
+		//Criando variavel (objeto) do tipo cliente
+		
+		Cliente cliente = new Cliente (Nome, CPF); //declarando um objeto cliente do tipo Clinte criando um objeto que recebe um construtor
+		
+		System.out.println("O nome do cliente eh: " + cliente.getNome() + " E o CPF eh: " + cliente.getCPF());
+		
+		System.out.println(" Digite novo nome");
+		Nome = sc.nextLine ();
+		
+		System.out.println(" Digite novo CPF");
+		CPF  = sc.nextLine ();
+		
+		cliente.setNome(Nome); // o objeto recebeu um novo nome
+		cliente.setCPF (CPF); // o objeto recebeu um novo valor
+		
+		System.out.println("O novo nome do cliente eh: " + cliente.getNome() + " O novo CPF eh: " + cliente.getCPF());
+		}
+		
+	}
