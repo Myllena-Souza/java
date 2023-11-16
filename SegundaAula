@@ -62,3 +62,107 @@ public class Cliente {
 		}
 		
 	}
+
+
+
+############### EXERCICIO DA REDE SOCIAL ###################
+/// FALTA TERMINAR ///
+
+
+import java.util.Scanner;
+
+//CLASSES E ATRIBUTOS
+public class Usuario {
+	private String Nome;
+	private String Email;
+	private String Nacionalidade;
+	private ArrayList <String> postagens;
+	private int quantidadeDePostagens;
+	private int pontuacao;
+	
+	public String getNome() {
+		return Nome;
+	}
+	//CONSTRUTOR
+	
+	public Usuario(String nome, String email, String nacionalidade) {
+		super();
+		Nome = nome;
+		Email = email;
+		Nacionalidade = nacionalidade;
+		this.postagens = new ArrayList<String> ();
+		this.quantidadeDePostagens = 0;
+		this.pontuacao = 0;
+	}
+	
+	public void setNome(String nome) {
+		Nome = nome;
+	}
+	public String getEmail() {
+		return Email;
+	}
+	public void setEmail(String email) {
+		Email = email;
+	}
+	public String getNacionalidade() {
+		return Nacionalidade;
+	}
+	public void setNacionalidade(String nacionalidade) {
+		Nacionalidade = nacionalidade;
+	}
+	
+	//CRIANDO METODOS
+	
+	public void adicionaPostagem (String post) { //criando o metodo 
+		this.postagens.add(post);
+		this.quantidadeDePostagens ++; // incremento
+	}
+	public void alteraPontuacao (int delta) {
+		this.pontuacao = this.pontuacao + delta;
+		if  (this.pontuacao < 0) {  // função que altera 
+			this.pontuacao = 0;
+			
+		}
+	}
+	
+	public Usuario(ArrayList<String> postagens) {
+		super();
+		this.postagens = new ArrayList<String> (); //criando uma instancia do tipo lista de string 
+	}
+	
+	public static void main(String[] args) {
+		
+		/*Scanner sc = new Scanner (System.in);
+		System.out.println("Digite o Nome: ");
+		String Nome = sc.nextLine();
+		System.out.println("Digite o Email: ");
+		String Email = sc.nextLine();
+		System.out.println("Digite a Nacionalidade: ");
+		String Nacionalidade = sc.nextLine();
+		
+	
+		Usuario usuario = new Usuario (Nome, Email, Nacionalidade);
+		
+		System.out.println("Digite uma Postagem: ");
+		String post = sc.nextLine();
+		
+		usuario.adicionaPostagem(post);*/
+		Scanner sc = new Scanner (System.in);
+		String opcao;
+		ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
+		do {
+			System.out.println("Digite o Nome: ");
+			String Nome = sc.nextLine();
+			System.out.println("Digite o Email: ");
+			String Email = sc.nextLine();
+			System.out.println("Digite a Nacionalidade: ");
+			String Nacionalidade = sc.nextLine();
+			Usuario usuario = new Usuario (Nome, Email, Nacionalidade);
+			listaUsuarios.add(usuario);
+			System.out.println("Deseja continuar? (s/n) ");
+			opcao = sc.nextLine();
+		}
+		while(opcao != "n");
+		
+		//falta terminar e finalizar o loop.
+		
