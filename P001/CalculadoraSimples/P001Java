@@ -1,0 +1,442 @@
+QUESTÃO 1:
+
+Classe: Uma classe é uma estrutura que irá definir algum objeto. 
+Nela contém os métodos e atributos que descrevem o comportamento e o estado 
+desses objetos que serão criados com base nela.
+
+Objeto: Um objeto é uma instância específica de uma classe. Ele é criado a partir 
+de uma classe e possui seus próprios valores para os atributos definidos na classe. 
+Os métodos da classe podem ser chamados em um objeto específico.
+
+Exempo 1 em C++
+
+		#include <iostream>
+		#include <string>
+		
+		class Pessoa {
+		public:
+		    std::string nome;
+		    int idade;
+		    void apresentar() {
+		        std::cout << "Oi, meu nome é " << nome << " e eu tenho " << idade << " anos." << std::endl;
+		    }
+		};
+		
+		int main() {
+		    Pessoa pessoa1;
+		    pessoa1.nome = "Alice";
+		    pessoa1.idade = 25;
+		    pessoa1.apresentar();
+		
+		    return 0;
+		}
+
+Exempo 1 em java
+
+	public class Pessoa {
+    String nome;
+    int idade;
+    void apresentar() {
+        System.out.println("Oi, meu nome é " + nome + " e eu tenho " + idade + " anos.");
+    }
+
+    public static void main(String[] args) {
+        Pessoa pessoa1 = new Pessoa();
+        pessoa1.nome = "Alice";
+        pessoa1.idade = 25;
+        pessoa1.apresentar();
+    }
+}
+
+Exempo 2 em C++
+
+		#include <iostream>
+		#include <string>
+		
+		class Carro {
+	public:
+	    std::string modelo;
+	    int ano;
+	    void exibirInfo() {
+	        std::cout << "Carro: " << modelo << ", Ano: " << ano << std::endl;
+	    }
+	};
+	
+	int main() {
+	    Carro carro1;
+	    carro1.modelo = "Toyota Corolla";
+	    carro1.ano = 2022;
+	    carro1.exibirInfo();
+	
+	    return 0;
+	}
+
+Exempo 2 em java
+
+	public class Carro {
+    String modelo;
+    int ano;
+    void exibirInfo() {
+        System.out.println("Carro: " + modelo + ", Ano: " + ano);
+    }
+
+    public static void main(String[] args) {
+        Carro carro1 = new Carro();
+        carro1.modelo = "Toyota Corolla";
+        carro1.ano = 2022;
+        carro1.exibirInfo();
+    }
+}
+	
+Exempo 3 em C++
+
+	#include <iostream>
+	#include <string>
+	
+	class Livro {
+	public:
+    std::string titulo;
+    std::string autor;
+    int anoPublicacao;
+    void exibirDetalhes() {
+        std::cout << "Livro: " << titulo << ", Autor: " << autor << ", Ano de Publicação: " << anoPublicacao << std::endl;
+    }
+};
+
+	int main() {
+    Livro livro1;
+    livro1.titulo = "Dom Quixote";
+    livro1.autor = "Miguel de Cervantes";
+    livro1.anoPublicacao = 1605;
+    livro1.exibirDetalhes();
+
+    return 0;
+}
+	
+Exempo 3 em java
+
+	public class Livro {
+    String titulo;
+    String autor;
+    int anoPublicacao;
+    void exibirDetalhes() {
+        System.out.println("Livro: " + titulo + ", Autor: " + autor + ", Ano de Publicação: " + anoPublicacao);
+    }
+
+    public static void main(String[] args) {
+        Livro livro1 = new Livro();
+        livro1.titulo = "Dom Quixote";
+        livro1.autor = "Miguel de Cervantes";
+        livro1.anoPublicacao = 1605;
+        livro1.exibirDetalhes();
+    }
+}
+	
+Exempo 4 em C++
+
+	#include <iostream>
+
+class Retangulo {
+public:
+    double comprimento;
+    double largura;
+    double calcularArea() {
+        return comprimento * largura;
+    }
+};
+
+int main() {
+    Retangulo retangulo1;
+    retangulo1.comprimento = 5.0;
+    retangulo1.largura = 3.0;
+    std::cout << "Área do retângulo: " << retangulo1.calcularArea() << std::endl;
+
+    return 0;
+}
+	
+Exempo 4 em Java
+
+	public class Retangulo {
+    double comprimento;
+    double largura;
+    double calcularArea() {
+        return comprimento * largura;
+    }
+
+    public static void main(String[] args) {
+        Retangulo retangulo1 = new Retangulo();
+        retangulo1.comprimento = 5.0;
+        retangulo1.largura = 3.0;
+        System.out.println("Área do retângulo: " + retangulo1.calcularArea());
+    }
+}
+	
+Exempo 5 em C++
+
+	#include <iostream>
+#include <string>
+
+class ContaBancaria {
+public:
+    std::string titular;
+    double saldo;
+    void depositar(double valor) {
+        saldo += valor;
+    }
+    void sacar(double valor) {
+        if (valor <= saldo) {
+            saldo -= valor;
+            std::cout << "Saque de " << valor << " realizado com sucesso." << std::endl;
+        } else {
+            std::cout << "Saldo insuficiente para realizar o saque." << std::endl;
+        }
+    }
+};
+
+int main() {
+    ContaBancaria conta1;
+    conta1.titular = "João";
+    conta1.saldo = 1000.0;
+    conta1.depositar(500.0);
+    conta1.sacar(200.0);
+
+    return 0;
+}
+
+Exempo 5 em Java
+
+	public class ContaBancaria {
+    String titular;
+    double saldo;
+    void depositar(double valor) {
+        saldo += valor;
+    }
+    void sacar(double valor) {
+        if (valor <= saldo) {
+            saldo -= valor;
+            System.out.println("Saque de " + valor + " realizado com sucesso.");
+        } else {
+            System.out.println("Saldo insuficiente para realizar o saque.");
+        }
+    }
+
+    public static void main(String[] args) {
+        ContaBancaria conta1 = new ContaBancaria();
+        conta1.titular = "João";
+        conta1.saldo = 1000.0;
+        conta1.depositar(500.0);
+        conta1.sacar(200.0);
+    }
+}
+
+QUESTÃO 2:
+
+		Assim como em C++. em Java você declara uma variável especificando o 
+		tipo de dado seguido pelo nome da variável. A diferença é que em C++ pode usar a palavra-chave 
+		'auto' para deduzir automaticamente o tipo de dados com base no valor atribuído. 
+		Aqui está um exemplo simples:
+
+			int idade;
+			
+			Java possui oito tipos de dados primitivos, divididos em quatro categorias principais:
+			
+			1 (Números Inteiros):
+			
+			byte (8 bits)
+			short (16 bits)
+			int (32 bits)
+			long (64 bits)
+			
+			2 (Números de Ponto Flutuante):
+			
+			float (32 bits)
+			double (64 bits)
+			
+			3 (Caractere):
+			
+			char (16 bits)
+			
+			4 (Booleano):
+			
+			boolean (representa true ou false)
+
+A seguir é apresentado alguns tipos em Java:
+
+	int idade = 30;
+	double altura = 1.95;
+	char genero = 'F';
+	bool estudante = true;
+	long double numeroGrande = 13.2345635634456734647467647 
+	
+
+A herança é um conceito fundamental em programação orientada a objetos que permite 
+que uma classe herde atributos e comportamentos de outra classe. 
+Em Java, você pode criar uma subclasse (ou classe derivada) a partir de uma classe existente 
+(ou classe base) usando a palavra-chave "extends". As subclasses (ou classes derivadas) podem 
+ser declaradas como public, sem Palavra-chave (Package-Private) no caso de Java, private, ou protected.
+
+Sintaxe:
+
+class ClasseBase {
+    // Atributos e métodos da classe base
+}
+
+class Subclasse extends ClasseBase {
+    // Atributos e métodos adicionais ou sobrepostos
+}
+
+A subclasse herda automaticamente os membros (atributos e métodos) da classe base, e você pode adicionar membros 
+adicionais ou sobrepor os membros existentes, se necessário. Um exemplo disso:
+
+	class Animal {
+    void emitirSom() {
+        System.out.println("Som genérico de animal");
+    }
+}
+
+class Gato extends Animal {
+    void emitirSom() {
+        System.out.println("Miau");
+    }
+
+    void pular() {
+        System.out.println("O gato está pulando");
+    }
+}
+
+public class TesteHeranca {
+    public static void main(String[] args) {
+        Gato meuGato = new Gato();
+        meuGato.emitirSom(); // Chama o método sobrescrito da subclasse
+        meuGato.pular();     // Método adicional da subclasse
+    }
+}
+
+Em C++, o conceito de herança é semelhante. Você pode criar uma classe derivada usando a palavra-chave 'class' 
+seguida por um (:) e a palavra-chave 'public'.
+
+	class ClasseBase {
+	    // Atributos e métodos da classe base
+	};
+	
+	class Subclasse : public ClasseBase {
+	    // Atributos e métodos adicionais ou sobrepostos
+	};
+	
+Em C++, a herança também pode ser pública (public), privada (private), ou protegida (protected). 
+A palavra-chave public indica que os membros públicos da classe base permanecem públicos na classe derivada.
+
+Ex.:
+
+	#include 
+	using namespace std;
+	
+	class Animal {
+	public:
+	    void emitirSom() {
+	        cout << "Som genérico de animal" << endl;
+	    }
+	};
+	
+	class Gato : public Animal {
+	public:
+	    void emitirSom() {
+	        cout << "Miau" << endl;
+	    }
+	
+	    void pular() {
+	        cout << "O gato está pulando" << endl;
+	    }
+	};
+	
+	int main() {
+	    Gato meuGato;
+	    meuGato.emitirSom(); 
+	    meuGato.pular();     
+	
+	    return 0;
+	}
+
+Um fator importante a se entender são as diferenças entre os tipos de subclasses em Java:
+
+1 - public (Pública):
+
+- Membros (atributos e métodos) da classe base declarados como public são herdados como public na classe derivada.
+- Os membros protected e package-private (sem palavra-chave) da classe base são herdados como protected na classe 
+  derivada.
+- Membros private da classe base não são herdados.
+
+Por exemplo:
+
+	public class ClasseBase {
+    public int publicField;
+    protected int protectedField;
+    int packagePrivateField;
+    private int privateField;
+}
+
+public class Subclasse extends ClasseBase {
+    // Todos os campos são herdados, exceto privateField
+}
+	// Classe com visibilidade public em Java
+public class ClasseJavaPublic {
+    public int publicField;
+
+    public void publicMethod() {
+        System.out.println("Método público em Java");
+    }
+}
+	2 - protected (Protegida):
+
+- Membros public e protected da classe base são herdados como protected na classe derivada.
+- Membros package-private e private da classe base não são herdados.
+
+Exemplo:
+
+	public class ClasseBase {
+    public int publicField;
+    protected int protectedField;
+    int packagePrivateField;
+    private int privateField;
+}
+
+public class Subclasse extends ClasseBase {
+    // São herdados publicField e protectedField
+}
+
+	3 - Sem Palavra-chave (Package-Private):
+
+- Se nenhuma palavra-chave de visibilidade (public, protected, private) é usada, a visibilidade padrão é chamada de "package-private".
+- Membros package-private e protected da classe base são herdados como protected na classe derivada.
+- Membros public da classe base são herdados como public.
+- Membros private da classe base não são herdados.
+
+4 - private (Privada):
+
+- Membros private da classe base não são herdados pela classe derivada.
+-A visibilidade private significa que o membro é acessível apenas dentro da própria classe.
+
+QUESTÃO 4:
+
+Para entender esse aspecto, vamos primeiramente lembrarmos dos objetivos de cada linguagem. 
+Em Java, o objetivo principal é sua portabilidade. Já em C++ o principal objetivo é sua extrema 
+eficiência e otimização. Porém, a afirmação não é correta. Em Java, a semântica de variáveis é diferente 
+daquela em C++. Em Java, quando você declara uma variável de um tipo primitivo (como int, double, char, etc.), 
+você está alocando espaço na memória para armazenar o valor diretamente. Java não utiliza ponteiros de forma 
+explícita para tipos primitivos.
+
+Exemplo:
+
+
+int numero = 42;
+     
+Neste caso, 'numero' é uma variável que armazena diretamente o valor 42 na memória.
+
+Porém, quando você lida com objetos em Java, as variáveis contêm referências para os objetos, não os objetos em si. A alocação de memória para objetos é feita no heap, e a variável contém um endereço de referência para esse objeto.
+
+Exemplo com objeto:
+
+
+String texto = new String("Exemplo");
+     
+Aqui, 'texto' contém uma referência ao objeto String alocado no heap.
